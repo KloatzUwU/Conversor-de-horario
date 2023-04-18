@@ -1,7 +1,7 @@
-function ConverteHorario(time, timezone){
+async function ConverteHorario(time, timezone){
     if(timezone === "brt"){
         let horarioEST = time - 1;
-        let horarioPST = time - 5;
+        let horarioPST = time - 4;
         const horariosConvertidos = ([{
             time: horarioEST,
             timezone: "est", 
@@ -9,9 +9,32 @@ function ConverteHorario(time, timezone){
             time: horarioPST,
             timezone: "pst",
         }])
-
+        return horariosConvertidos;
+    }
+    if(timezone === "est"){
+        let horarioBRT = time + 1;
+        let horarioPST = time - 3;
+        const horariosConvertidos = ([{
+            time: horarioBRT,
+            timezone: "brt", 
+        },{
+            time: horarioPST,
+            timezone: "pst",
+        }])
+        return horariosConvertidos;
+    }
+    if(timezone === "pst"){
+        let horarioEST = time + 3;
+        let horarioBRT = time + 4;
+        const horariosConvertidos = ([{
+            time: horarioEST,
+            timezone: "est", 
+        },{
+            time: horarioBRT,
+            timezone: "brt",
+        }])
         return horariosConvertidos;
     }
 }
 
-console.log(ConverteHorario(10, "brt"));
+console.log(ConverteHorario(10, "est"));
