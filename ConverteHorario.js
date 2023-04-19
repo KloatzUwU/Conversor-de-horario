@@ -11,7 +11,7 @@ async function ConverteHorario(time, timezone){
             time: horarioPST,
             timezone: "pst",
         }])
-        return horariosConvertidos;
+        return JSON.stringify(horariosConvertidos);
     }
     if(timezone === "est"){
         let horarioBRT = time + 1;
@@ -23,7 +23,7 @@ async function ConverteHorario(time, timezone){
             time: horarioPST,
             timezone: "pst",
         }])
-        return horariosConvertidos;
+        return JSON.stringify(horariosConvertidos);
     }
     if(timezone === "pst"){
         let horarioEST = time + 3;
@@ -35,7 +35,7 @@ async function ConverteHorario(time, timezone){
             time: horarioBRT,
             timezone: "brt",
         }])
-        return horariosConvertidos;
+        return JSON.stringify(horariosConvertidos);
     }
 }
 
