@@ -1,3 +1,5 @@
+const horario = require('./teste.json');
+
 async function ConverteHorario(time, timezone){
     if(timezone === "brt"){
         let horarioEST = time - 1;
@@ -37,4 +39,4 @@ async function ConverteHorario(time, timezone){
     }
 }
 
-console.log(ConverteHorario(10, "est"));
+console.log(ConverteHorario(horario.time, horario.timezone));
