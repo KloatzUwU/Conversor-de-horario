@@ -1,5 +1,5 @@
 import express  from "express";
-import PstController from "../controllers/pstController";
+import PstController from "../controllers/pstController.js";
 
 const router = express.Router();
 
