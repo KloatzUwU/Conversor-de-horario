@@ -4,7 +4,7 @@ import ConverteHorario from "../../ConverteHorario.js";
 class BrtController {
     static ConverteBRT = (req, res) => {
         const horario = new BRT(req.body);
-        const resultado = ConverteHorario(horario.time, horario.timezone) 
+        const resultado = ConverteHorario(horario.time, "brt") 
         res.status(200).json(resultado)
     }
 }
