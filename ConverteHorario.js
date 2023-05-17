@@ -1,7 +1,10 @@
 function ConverteHorario(time, timezone){
     if(timezone === "brt"){
+        if(time == null){
+            return `erro`
+        }
         if(time >= 24 || time < 0){
-            return `o horário passado não é valido, por favor utilize o sistema 24 horas`
+            return `erro2`
         }else {
             if(time >= 0 && time < 4){
                 let horaVariavel;
@@ -55,8 +58,11 @@ function ConverteHorario(time, timezone){
     }
 
     if(timezone === "eest"){
+        if(time == null){
+            return `erro`
+        }
         if(time >= 24 || time < 0){
-            return `o horário passado não é valido, por favor utilize o sistema 24 horas`
+            return `erro2`
         }else {
             if(time >= 18 && time <= 23){
                 let horaVariavelBRT;
@@ -140,8 +146,11 @@ function ConverteHorario(time, timezone){
     }
 
     if(timezone === "pst"){
+        if(time == null){
+            return `erro`
+        }
         if(time >= 24 || time < 0){
-            return `o horário passado não é valido, por favor utilize o sistema 24 horas`
+            return `erro2`
         }else{
             if(time >= 0 && time <= 23){
                 let horaVariavelEEST;
