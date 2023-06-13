@@ -3,7 +3,10 @@ import ConverteHorario from "../../ConverteHorario.js";
 class HoraAtualController {
     static ConverteAtual = (req, res) => {
         const data = new Date();
-        const hora = data.getHours()
+        let hora = data.getHours()
+
+        hora -= 3
+
         const resultado = [({
             time: hora,
             timezone: "brt", 
